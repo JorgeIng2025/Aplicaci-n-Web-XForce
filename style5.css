@@ -249,7 +249,13 @@ nav .btn {
     .grupo0 {
         grid-template-columns: repeat(1, 1fr);
         margin-top: 10%;
-        width: 100%;
+        max-width: 100%;
+    }
+
+    .grupo0 .input-container input,
+    .input-container textarea {
+        margin-left: 5px;
+        margin-right: 5px;
     }
 
 }
