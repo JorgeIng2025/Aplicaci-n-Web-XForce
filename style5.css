@@ -73,9 +73,9 @@ nav .btn {
 /* Estilos para hacer el menú responsive */
 @media screen and (max-width: 800px) {
     nav .MenuHorizontal {
-/*         flex-direction: column; */
+        flex-direction: column;
         align-items: center;
-        margin: 10px;
+/*         margin: 10px; */
     }
 
     nav li {
@@ -248,8 +248,8 @@ nav .btn {
 
     .grupo0 {
         grid-template-columns: repeat(1, 1fr);
-        margin-top: 50%;
-        max-width: 100%;
+        margin-top: 10%;
+        width: 100%;
     }
 
 }
