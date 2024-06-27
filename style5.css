@@ -75,7 +75,7 @@ nav .btn {
     nav .MenuHorizontal {
         flex-direction: column;
         align-items: center;
-/*         margin: 10px; */
+        margin: 10px;
     }
 
     nav li {
@@ -122,6 +122,7 @@ nav .btn {
     font-size: 20px;
     font-family: sans-serif;
     font-weight: lighter;
+    textaling: center;
     color: #021B2B;
 }
 
@@ -146,7 +147,7 @@ nav .btn {
     border-radius: 8px;
     /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
     /* max-width: 400px; */
-    width: 365px;
+    width: 500px;
     margin-bottom: 50px;
     
 }
@@ -246,15 +247,10 @@ nav .btn {
 
 @media screen and (max-width: 800px) {
 
-    .grupo0 {
-        grid-template-columns: repeat(1, 1fr);
-        margin-top: 10%;
-        max-width: 100%;
-    }
-
-    .grupo0 .input-container input,
-    .input-container textarea {
-        width: 90%;
+    .contact-form-container {
+        flex-direction: column;
+        text-align: center;
+        max-width: 300px;
     }
 
 }
