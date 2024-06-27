@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/yezzyBoost.css">
+
+    <title>Adidas Yezzy 700 Boost v2 "Static" | XForce</title>
+</head>
+
+<body>
+    <div id="carrito" class="carrito-oculto">
+        <button onclick="toggleCarrito()" class="close">X</button>
+        <div id="Carrito">
+            <h2>Carrito de Compras</h2>
+            <div id="productos"></div>
+            <p>Total: <span id="total"></span></p>
+        </div>
+    </div>
+
+
+    <nav>
+        <ul class="MenuHorizontal">
+            <div class="grupobox">
+                <img class="Adidas" src="img.Desarrollo.02/Adidas.jpg" alt="">
+            </div>
+            <ul>
+                <li>
+                    <a href="index2.html">Inicio</a>
+
+                </li>
+            </ul>
+            <!-- <ul>
+                <li>
+                    <a href="#Marcas">Galery</a>
+                    <ul class="MenuVertical">
+                        <a href="">Men</a>
+                        <a href="">Woman</a> 
+                    </ul>
+                </li>
+            </ul> -->
+            <ul>
+                <li>
+                    <a href="#">Marcas</a>
+                    <ul class="MenuVertical">
+                        <a href="Adidas.html">Adidas</a>
+                        <a href="">Nike</a>
+                        <a href="">Fila</a>
+                        <a href="">Vans</a>
+                        <a href="">New Balnce</a>
+                        <a href="#TheNorth">North Face</a>
+                    </ul>
+                </li>
+            </ul>
+            <!-- <ul>
+                <li>
+                    <a href="https://www.whatsapp.com" href="tel:+60210656" target="_blank">Contact Us</a>
+                </li>
+            </ul> -->
+            <ul>
+                <li>
+                    <a href="#redessociales">Redes Sociales</a>
+
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <a onclick="toggleCarrito()" class="btn">Carrito</a>
+                </li>
+            </ul>
+        </ul>
+    </nav>
+
+    <header>
+        <div class="container">
+            <div class="box">
+                <h1>Adidas Yezzy 700 Boost V2 "Static"</h1>
+                <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Maxime aliquam, impedit exercitationem accusantium saepe consequuntur alias rerum! Nobis soluta
+                    deserunt totam officia, ab et hic placeat sint provident? Ea modi ex,
+                    quidem ut veritatis autem iste sed, aspernatur nostrum dolores voluptatum dolorum et.
+                    Provident, minima. Cumque beatae architecto earum dolores?
+                </p>
+            </div>
+            <div class="grupo">
+                <div class="box">
+                    <img id="imgChange" src="img.Desarrollo/yezzy 350.03.png" alt="">
+                </div>
+            </div>
+            <div class="Size">
+                <!-- <div class="box">-->
+                <h2>Tallas</h2>
+                <!--<button class="size">
+                        43
+                    </button>
+                    <button class="size">
+                        40
+                    </button>
+                    <button class="size">
+                        37
+                    </button>
+                    <button class="size">
+                        44
+                    </button>
+                </div> -->
+                <select name="" id="talla">
+                    <ul>
+                        <option value="43">43</option>
+                    </ul>
+                    <ul>
+                        <option value="42">42</option>
+                    </ul>
+                    <ul>
+                        <option value="29">29</option>
+                    </ul>
+                    <ul>
+                        <option value="40">40</option>
+                    </ul>
+                </select>
+            </div>
+
+            <div id="Botones">
+                <img onclick="document.getElementById('imgChange').src" src="img.Desarrollo/boost 700 black.png"
+                    id="black">
+                <img onclick="document.getElementById('imgChange').src" src="img.Desarrollo/boost 700 blue.png"
+                    id="blue">
+                <img onclick="document.getElementById('imgChange').src" src="img.Desarrollo/yezzy 350.03.png"
+                    id="white">
+            </div>
+            <div id="add to card">
+                <!--  -->
+                <button id="buttonCard"
+                    onclick="agregarAlCarrito ('Adidas Yezzy 350 V2 MX Blue ', 194.995, document.getElementById('talla').value, document.getElementById('imgChange').src)"
+                    class="toggle-btn">Añadir al carrito
+                </button>
+            </div>
+            
+            <section class="Price">
+                <p>
+                    Precio: 
+                    <p class="importante">₡ 149.995
+                    </p>
+                </p>
+                
+            </section>
+        </div>
+    </header>
+    <footer class="piepagina">
+        <div class="grupo1">
+            <div class="box">
+                <h1 class="importante">XFORCE
+                    <h2 class="sub">ESSENCIALS</h2>
+                </h1>
+            </div>
+            <div class="box">
+                <h1>SÍGUENOS</h1>
+                <div id="redessociales">
+                    <a href="https://www.facebook.com" class="fa fa-facebook" target="_blank">
+                        Facebook</a>
+                    <a href="https://www.instagram.com" class="fa fa-instagram" target="_blank">
+                        Instagram</a>
+                    <a href="https://www.whatsapp.com" class="fa fa-whatsapp" target="_blank">
+                        whatsapp</a>
+                </div>
+            </div>
+            <div class="box">
+                <h1>ACERCA DE</h1>
+                <div class="SobreDe">
+                    <a href="#">Acerca de nosotros</a>
+                    <a href="index5.html">Contacto</a>
+                    <a href="#"></a>
+                    <a href="#"></a>
+                </div>
+            </div>
+        </div>
+        <div class="grupo2">
+            <small>&copy; 2024 <b> XForce</b> - Todos los derechos reservados.</small>
+        </div>
+    </footer>
+
+  <!-- Importando bootstrap -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+  crossorigin="anonymous"></script>
+<!-- Fin importe script bootstrap -->
+
+    <script src="Scripts/add to card.js"></script>
+</body>
+
+</html>

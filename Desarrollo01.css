@@ -1,0 +1,478 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+
+body {
+    /* background-color: #ebdfcc; */
+    width: 100%;
+    height: auto;
+
+}
+
+
+.container h1 {
+    Color: #02031a;
+    font-weight: bold;
+    font-size: 54px;
+    font-family: serif;
+}
+
+header {
+    text-align: center;
+    margin-left: 25px;
+    margin-right: 25px;
+    margin-top: 50px;
+    padding: 25px;
+    /* background-color: #FDF8F0; */
+    border-radius: 8px;
+}
+
+
+nav {
+    margin: auto;
+    display: flex;
+    margin-top: 15px;
+    margin-bottom: 50px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: small;
+    font-family: serif;
+    justify-content: center;
+}
+
+
+/* Estilos para los elementos del menú */
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+}
+
+.MenuHorizontal {
+    list-style: none;
+    justify-content: center;
+    display: flex;
+}
+
+nav li {
+    margin: 0 10px;
+    /* Espaciado entre elementos del menú */
+}
+
+nav a {
+    color: #021b2b;
+    font-weight: small;
+    text-decoration: none;
+    padding: 5px 15px;
+    display: block;
+    font-family: sans-serif;
+    font-size: 18px;
+}
+
+
+nav a:hover {
+    background-color: #021b2b;
+    color: #F4FFFC;
+    border-radius: 8px;
+    font-weight: bold;
+    /* Color de fondo al pasar el ratón por encima */
+}
+
+.carrito-oculto {
+    display: none;
+    /* Oculto por defecto */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: 80%;
+    border-radius: 8px;
+    background-color: #FFF;
+    padding: 20px;
+    transition: top 0.5s ease;
+    /* Animación de desplazamiento */
+    overflow: scroll;
+    z-index: 9999;
+    /* Asegura que el modal esté frente al fondo */
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    /* Sombra alrededor del modal */
+    justify-content: center;
+    text-align: center;
+
+
+    h2 {
+        font-size: 30px;
+        margin-bottom: 50px;
+    }
+}
+
+/* Estilo para mostrar el carrito */
+.carrito-visible {
+    top: 0;
+}
+
+#Carrito {
+    font-size: 20px;
+    font-weight: bold;
+    font-family: sans-serif;
+    color: #021B2B;
+
+}
+
+.carrito-oculto h2 {
+    font-size: 54px;
+    font-weight: bold;
+    font-family: serif;
+    color: #02031a;
+}
+
+.carrito-oculto h3{
+    text-align: justify;
+    font-size: 25px;
+    color: #021B2B;
+}
+
+.carrito-oculto span {
+    text-align: center;
+    font: 18px;
+    color: #021B2B;
+}
+
+.carrito-oculto  #total{
+    color: #FF0000;
+}
+
+.producto img {
+    width: 50%;
+    margin: 2, 5px;
+    /* border: 1px solid #c2c3c0; */
+    /* background-color: #FDF8F0; */
+    /* box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    border-radius: 8px; */
+    padding: 10px;
+    margin-bottom: 15px;
+}
+
+
+.producto {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    align-items: center;
+    border-bottom: 1px solid #b9acac;
+    padding: 10px 0;
+}
+
+.carrito-oculto .close {
+    border-radius: none;
+    border-style: none;
+    background-color: transparent;
+    margin-left: 90%;
+    width: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-bottom: 0px;
+}
+
+#Carrito button {
+    background-color: #FF0000;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 16px;
+    margin-bottom: 10px;
+
+}
+
+#Carrito button:hover {
+    background-color: rgb(18, 185, 96);
+    transition: all 300ms ease;
+}
+
+#finalizarCompraBtn {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    display: block;
+    margin: 20px auto;
+}
+
+#finalizarCompraBtn:hover {
+    background-color: #218838;
+    transition: all 300ms ease;
+}
+
+.MenuVertical {
+    display: none;
+    list-style: none;
+}
+
+.MenuHorizontal li:hover .MenuVertical {
+    display: block;
+
+}
+
+
+/* Estilos para hacer el menú responsive */
+@media screen and (max-width: 600px) {
+    header nav .MenuHorizontal {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .MenuHorizontal li:hover .MenuVertical {
+        display: block;
+
+    }
+
+    header nav li {
+        margin: 15px 0;
+    }
+
+}
+
+
+
+/* Esta secciòn hace posible el estilo de desplasamiento 
+  tambipen tomando en cuenta qeu nos amplia el fondo donde esta ubicado */
+.slider {
+    width: 100%;
+    height: 350px;
+    overflow: hidden;
+}
+
+/* nos permite la ediciòn de duraciòn de movimiento que tendra la animaciòn
+tamibine nos permite el tipo de position */
+figure {
+    position: relative;
+    left: 0;
+    width: 400%;
+    animation: 20s imagenes infinite;
+}
+
+.imagenes {
+    position: relative;
+    width: 25%;
+    float: left;
+}
+
+.slider img {
+    width: 100%;
+    max-width: 500px;
+    margin-block: 20px;
+}
+
+.slider .imagenes h1{
+    font-family: sans-serif;
+    font-weight: small;
+    font-size: 34px;
+    color: #021b2b;
+}
+
+
+/* nos ayuda con el porcenta de cuando se movera a la izquierda */
+@keyframes imagenes {
+    0% {
+        left: 0%;
+    }
+
+    20% {
+        left: 0%;
+    }
+
+    25% {
+        left: -100%;
+    }
+
+    45% {
+        left: -100%;
+    }
+
+    50% {
+        left: -200%;
+    }
+
+    70% {
+        left: -200%;
+    }
+
+    75% {
+        left: -300%;
+    }
+
+    95% {
+        left: -300%;
+    }
+
+    100% {
+        left: -0%;
+    }
+}
+
+
+#Marcas section {
+    margin: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 25px;
+
+}
+
+#Marcas section .lista-productos img{
+    width: 90%;
+    margin-bottom: 50px;
+}
+
+#Marcas section .lista-productos {
+    border: 1px solid #C2C3C0;
+    /* background-color: #FDF8F0; */
+    border-radius: 8px;
+    text-align: center;
+    padding: 15px;
+    cursor: pointer;
+    margin-bottom: 5px;
+
+}
+
+#Marcas section .lista-productos:hover{
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+#Marcas section .lista-productos img:hover{
+    transform: scale(1.1);
+    transition: all 300ms ease;
+
+}
+
+#Marcas section article h1{
+    font-size: 20px;
+    font-weight: bold;
+    font-family: serif;
+    text-align: justify;
+}
+
+#Marcas section article h2{
+    font-size: 18px;
+    font-weight: bold;
+    font-family: serif;
+    text-align: justify;
+    color: #aaaaaa;
+}
+
+#Marcas section article p{
+    text-align: justify;
+    font-size: 20px;
+    font-weight: bold;
+    color: #FF0000;
+    margin-bottom: 20px;
+}
+
+@media screen and (max-width: 800px) {
+    #Marcas section {
+        flex-direction: column;
+        grid-template-columns: repeat(2, 1fr);
+        text-align: center;
+    }
+
+}
+
+.piepagina {
+    width: 100%;
+    height: 50%;
+}
+
+.grupo1 {
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    grid-gap: 50px;
+    padding: 45px 0px;
+
+}
+
+.piepagina .grupo1 .box .importante,
+h2 {
+    font-size: 3em;
+    font-family: serif;
+    color: black;
+}
+
+.piepagina .grupo1 .box h1 {
+    text-align: center;
+    font-family: serif;
+    font-size: 1em;
+    color: black;
+}
+
+.piepagina .grupo1 #redessociales a {
+    display: block;
+    text-decoration: none;
+    line-height: 35px;
+    color: black;
+    transition: all 300ms ease;
+}
+
+.piepagina .grupo1 #redessociales a:hover {
+    color: #777b6e;
+}
+
+.piepagina .grupo1 .SobreDe a {
+    list-style: none;
+    text-decoration: none;
+    display: block;
+    line-height: 35px;
+    color: black;
+    transition: all 300ms ease;
+    font-family: serif;
+
+}
+
+.piepagina .grupo1 .SobreDe a:hover {
+    color: #777b6e;
+}
+
+.piepagina .grupo2 {
+    /* background-color: #0d2033; */
+    padding: 15px 10px;
+    text-align: center;
+    color: black;
+}
+
+.piepagina .grupo2 small {
+    font-size: 15px;
+    font-family: serif;
+
+}
+
+@media screen and (max-width: 600px) {
+
+    .grupo1 {
+        grid-template-columns: repeat(1, 1fr);
+
+    }
+
+}
+
+
+@media screen and (max-width: 100px) {
+    .slider {
+        width: 100%;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 25px;
+        padding: 35px 0px;
+    }
+}

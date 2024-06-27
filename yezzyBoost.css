@@ -1,0 +1,460 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    /* background-color: #EBDFCC; */
+}
+
+
+nav {
+    margin: auto;
+    display: flex;
+    margin-top: 5px;
+    font-size: 18px;
+    font-weight: small;
+    text-align: center;
+    font-family: sans-serif;
+    grid-template-columns: repeat(1, 1fr);
+    justify-content: center;
+}
+
+.Adidas {
+    width: 50%;
+    max-height: 150px;
+    max-width: 150px;
+}
+
+/* Estilos para los elementos del menú */
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.MenuHorizontal {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+nav li {
+    margin: 0 10px;
+    /* Espaciado entre elementos del menú */
+}
+
+nav a {
+    color: #021B2B;
+    text-decoration: none;
+    padding: 5px 15px;
+    display: block;
+}
+
+nav a:hover {
+    background-color: #021B2B;
+    color: #F4FFFC;
+    border-radius: 8px;
+    font-weight: bold;
+    /* Color de fondo al pasar el ratón por encima */
+}
+
+nav .btn {
+    cursor: pointer;
+}
+
+.MenuVertical {
+    display: none;
+    list-style: none;
+}
+
+.MenuHorizontal li:hover .MenuVertical {
+    display: block;
+}
+
+
+/* Estilos para hacer el menú responsive */
+@media screen and (max-width: 600px) {
+    nav .MenuHorizontal {
+        flex-direction: column;
+        align-items: center;
+
+    }
+
+    .MenuHorizontal li:hover .MenuVertical {
+        display: block;
+
+    }
+
+    nav li {
+        margin: 15px 0;
+    }
+
+
+}
+
+
+header {
+
+    text-align: center;
+    margin-top: 15px;
+    margin-left: 25px;
+    margin-right: 25px;
+    padding: 25px;
+    border-radius: 20px;
+    /* background-color: #FDF8F0; */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border: 1px solid #C2C3C0;
+
+    /* background-color: #EBDFCC; */
+}
+
+
+.container {
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    grid-gap: 50px;
+    padding: 45px 0px;
+}
+
+@media screen and (max-width: 750px) {
+    .container {
+        flex-direction: column;
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+    .container {
+        flex-direction: column;
+        grid-template-columns: repeat(1, 1fr);
+
+    }
+
+}
+
+.container .box h1 {
+    text-align: justify;
+    font-weight: bold;
+    font-family: serif;
+    font-size: 54px;
+    color: #02031a;
+
+}
+
+.container .box p {
+    text-align: justify;
+    font-size: 18px;
+    font-family: sans-serif;
+    color: #021B2B;
+}
+
+
+.container .Size h2 {
+    text-align: center;
+    font-size: 2em;
+    margin: 5px;
+
+}
+
+.container #talla {
+    width: 100px;
+    text-align: center;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+
+
+.container #Botones img {
+    width: 50px;
+    height: 30px;
+    cursor: pointer;
+    margin: 2, 5px;
+    /* border: 1px solid #c2c3c0; */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+
+    /* background-color: black; */
+}
+
+
+.container #Botones img.selected {
+
+    border: 2px solid #FF0841;
+}
+
+/* background-color: black; */
+
+/* .container .Botones #blue {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    background-color: #c4c8c5;
+}
+
+.container .Botones #white {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    background-color: #a4ac9d;
+}
+ */
+
+
+
+ .toggle-btn {
+    background-color: #FF0000;
+    color: white;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-size: 18px;
+}
+
+.toggle-btn.clicked {
+    background-color: rgb(18, 185, 96);
+    transition: all 1s ease;
+}
+
+.container .Price {
+    font-size: 25px;
+    text-align: center;
+    font-family: sans-serif;
+    font-weight: bold;
+    display: flex;
+
+}
+
+.container .Price .importante {
+    color: #FF0000;
+}
+
+.container .grupo img {
+    max-width: 80%;
+    max-height: 100%;
+    object-fit: cover;
+
+}
+
+.carrito-oculto {
+    display: none;
+    /* Oculto por defecto */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    max-width: 80%;
+    height: 80%;
+    border-radius: 8px;
+    background-color: #FFF;
+    padding: 20px;
+    transition: top 0.5s ease;
+    /* Animación de desplazamiento */
+    overflow: scroll;
+    z-index: 9999;
+    /* Asegura que el modal esté frente al fondo */
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    /* Sombra alrededor del modal */
+    justify-content: center;
+    text-align: center;
+
+
+    h2 {
+        font-size: 30px;
+    }
+}
+
+/* Estilo para mostrar el carrito */
+.carrito-visible {
+    top: 0;
+}
+
+#Carrito {
+    font-size: 20px;
+    font-weight: bold;
+    font-family: sans-serif;
+    color: #021B2B;
+
+}
+
+.carrito-oculto h2 {
+    font-size: 54px;
+    font-weight: bold;
+    font-family: serif;
+    color: #02031a;
+}
+
+.carrito-oculto h3{
+    text-align: justify;
+    font-size: 25px;
+    color: #021B2B;
+}
+
+.carrito-oculto span {
+    text-align: center;
+    font: 18px;
+    color: #021B2B;
+}
+
+.carrito-oculto  #total{
+    color: #FF0000;
+}
+
+.producto img {
+    width: 50%;
+    margin: 2, 5px;
+    /* border: 1px solid #c2c3c0; */
+    /* background-color: #FDF8F0;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    border-radius: 8px; */
+    padding: 10px;
+    margin-bottom: 15px;
+}
+
+
+.producto {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    align-items: center;
+    border-bottom: 1px solid #b9acac;
+    padding: 10px 0;
+}
+
+.carrito-oculto .close {
+    border-radius: none;
+    border-style: none;
+    background-color: transparent;
+    margin-left: 90%;
+    width: 18px;
+    cursor: pointer;
+    margin-bottom: 0px;
+}
+
+#Carrito button {
+    background-color: #FF0000;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 16px;
+    margin-bottom: 10px;
+
+}
+
+#Carrito button:hover {
+    background-color: rgb(18, 185, 96);
+    transition: all 300ms ease;
+}
+
+#finalizarCompraBtn {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    display: block;
+    margin: 20px auto;
+}
+
+#finalizarCompraBtn:hover {
+    background-color: #218838;
+    transition: all 300ms ease;
+}
+.piepagina {
+    width: 100%;
+    height: 50%;
+}
+
+.grupo1 {
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    grid-gap: 50px;
+    padding: 45px 0px;
+
+}
+
+.piepagina .grupo1 .box .importante,
+h2 {
+    font-size: 3em;
+    font-family: serif;
+    color: black;
+}
+
+.piepagina .grupo1 .box h1 {
+    text-align: center;
+    font-family: serif;
+    font-size: 1em;
+    color: black;
+}
+
+.piepagina .grupo1 #redessociales a {
+    display: block;
+    text-decoration: none;
+    line-height: 35px;
+    color: black;
+    transition: all 300ms ease;
+}
+
+.piepagina .grupo1 #redessociales a:hover {
+    color: #C2C3C0;
+}
+
+.piepagina .grupo1 .SobreDe a {
+    text-align: center;
+    list-style: none;
+    text-decoration: none;
+    display: block;
+    line-height: 35px;
+    color: black;
+    transition: all 300ms ease;
+    font-family: serif;
+
+}
+
+.piepagina .grupo1 .SobreDe a:hover {
+    color: #C2C3C0;
+}
+
+.piepagina .grupo2 {
+    /* background-color: #0d2033; */
+    padding: 15px 10px;
+    text-align: center;
+    color: #02031a;
+}
+
+.piepagina .grupo2 small {
+    font-size: 15px;
+    font-family: serif;
+
+}
+
+@media screen and (max-width: 600px) {
+
+    .grupo1 {
+        grid-template-columns: repeat(1, 1fr);
+
+    }
+
+}

@@ -1,0 +1,271 @@
+body{
+    background-color: #FFF;
+}
+
+nav {
+    margin: auto;
+    margin-bottom: 50px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: small;
+    font-family: sans-serif;
+    justify-content: center;
+    
+
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.3);
+    /* Fondo blanco transparente */
+    backdrop-filter: blur(10px);
+    /* Difuminado */
+    padding: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* Sombra sutil para efecto de elevación */
+    z-index: 1000;
+}
+
+nav h1 {
+    Color: #02031a;
+    font-weight: bold;
+    font-size: 30px;
+    font-family: serif;
+    margin-top: 0px ;
+}
+
+/* Estilos para los elementos del menú */
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.MenuHorizontal {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+nav li {
+    margin: 0 10px;
+    /* Espaciado entre elementos del menú */
+}
+
+nav a {
+    color: #021B2B;
+    text-decoration: none;
+    padding: 5px 15px;
+    display: block;
+}
+
+nav a:hover {
+    background-color: #021B2B;
+    color: #F4FFFC;
+    border-radius: 8px;
+    font-weight: bold;
+    /* Color de fondo al pasar el ratón por encima */
+}
+
+nav .btn {
+    cursor: pointer;
+}
+
+
+/* Estilos para hacer el menú responsive */
+@media screen and (max-width: 600px) {
+    nav .MenuHorizontal {
+        flex-direction: column;
+        align-items: center;
+        margin: 10px;
+    }
+
+    nav li {
+        margin: 15px 0;
+    }
+
+
+}
+
+
+.piepagina {
+    margin-top: 15%;
+    width: 100%;
+    height: 50%;
+}
+
+.grupo0 {
+    margin: auto;
+    display: grid;
+    justify-items: center;
+    /* padding: 45px 0px;
+    border-radius: 10px;
+    background-color: #C3E956; */
+
+}
+
+.piepagina .grupo0 .box {
+    padding: 50px;
+}
+
+.piepagina .grupo0 .box .importante {
+
+    font-family: serif;
+    font-weight: bold;
+    font-size: 35px;
+    margin-bottom: 0px;
+    color: #02031a;
+    margin-top: 20px;
+    /* margin-left: 30px; */
+}
+
+
+.piepagina .grupo0 .box h2 {
+    font-size: 20px;
+    font-family: sans-serif;
+    font-weight: lighter;
+    color: #021B2B;
+}
+
+/* .piepagina .grupo0 .box img {
+    margin: 25px;
+    border-radius: 20px;
+    max-width: 50%;
+    
+} */
+
+
+/* Contenedor del formulario de contacto */
+.contact-form-container {
+    background-color: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 1px solid #C2C3C0;
+
+
+    /* background-image: url("https://www.orlandomm.net/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fcoding.3e7f23e5.gif&w=640&q=75"); */
+    /* Fondo blanco transparente */
+    padding: 20px;
+    border-radius: 8px;
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+    /* max-width: 400px; */
+    width: 365px;
+    margin-bottom: 50px;
+    
+}
+/* 
+.contact-form-container form {
+    padding: 25px;
+    margin: 5px;
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+} */
+
+
+/* Estilo para el título del formulario */
+.contact-form-container h2 {
+    text-align: center;
+    font-family: serif;
+    font-weight: bold;
+    font-size: 35px;
+    margin-bottom: 20px;
+    color: #021B2B;
+}
+
+/* Contenedor para cada campo de entrada */
+.input-container {
+    position: relative;
+    margin-bottom: 40px;
+}
+
+/* Estilos para los campos de entrada */
+.input-container input,
+.input-container textarea {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 1px solid #C2C3C0;
+
+    color: #000;
+    font-size: 15px;
+    font-family: serif;
+    outline: none;
+    transition: border 0.3s;
+    border-radius: 8px;
+   
+}
+
+/* Estilos para las etiquetas dentro de los campos de entrada */
+.input-container label {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    /* background: rgba(255, 255, 255, 0.9); */
+    padding: 0 5px;
+    color: #021B2B;
+    font-size: 16px;
+    pointer-events: none;
+    transition: all 0.3s;
+    
+}
+
+/* Mueve la etiqueta hacia arriba cuando el campo de entrada está enfocado o tiene valor */
+.input-container input:focus+label,
+.input-container input:valid+label,
+.input-container textarea:focus+label,
+.input-container textarea:valid+label {
+    top: -10px;
+    left: 10px;
+    color: #02031a;
+    font-size: 12px;
+}
+
+/* Estilos para el botón de envío */
+.contact-form-container button {
+    width: 100%;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.3);
+    color: #021B2B;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    font-family: sans-serif;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/* Estilos para el botón de envío al pasar el ratón */
+.contact-form-container button:hover {
+    background-color: #209b3b91;
+    color: #021B2B;
+    border: 1px solid #C2C3C0;
+
+}
+
+
+
+@media screen and (max-width: 600px) {
+
+    .grupo0 {
+        grid-template-columns: repeat(1, 1fr);
+        margin-top: 50%;
+        max-width: 100%;
+    }
+
+}
+
+.piepagina .grupo2 {
+    /* background-color: #C3E956; */
+    padding: 15px 10px;
+    text-align: center;
+    color: #021B2B;
+}
+
+.piepagina .grupo2 small {
+    font-size: 15px;
+    font-family: serif;
+
+}
