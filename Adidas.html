@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/Adidas.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Adidas</title>
+</head>
+
+<body>
+
+    <div id="carrito" class="carrito-oculto">
+        <button onclick="toggleCarrito()" class="close">X</button>
+        <div id="Carrito">
+            <h2>Carrito de Compras</h2>
+            <div id="productos"></div>
+            <p>Total: <span id="total"></span></p>
+        </div>
+    </div>
+
+    <nav>
+        <ul class="MenuHorizontal">
+            <div class="grupobox">
+                <img class="Adidas" src="img.Desarrollo.02/Adidas.jpg" alt="">
+            </div>
+            <ul>
+                <li>
+                    <a href="index2.html">Inicio</a>
+
+                </li>
+            </ul>
+            <!-- <ul>
+                <li>
+                    <a href="#Marcas/Desarrollo01">Galery</a>
+                    <ul class="MenuVertical">
+                        <a href="">Men</a>
+                        <a href="">Woman</a> 
+                    </ul>
+                </li>
+            </ul> -->
+            <ul>
+                <li>
+                    <a>Marcas</a>
+                    <ul class="MenuVertical">
+                        <a href="Adidas.html">Adidas</a>
+                        <a href="">Nike</a>
+                        <a href="">Fila</a>
+                        <a href="">Vans</a>
+                        <a href="">New Balnce</a>
+                        <a href="#TheNorth">North Face</a>
+                    </ul>
+                </li>
+            </ul>
+            <!-- <ul>
+                <li>  
+                    <a href="https://www.whatsapp.com" href="tel:+60210656" target="_blank">Contact Us</a> 
+                </li>
+            </ul> -->
+            <ul>
+                <li>
+                    <a href="#redessociales">Redes Sociales</a>
+
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <a onclick="toggleCarrito()" class="btn">Carrito</a>
+                </li>
+            </ul>
+        </ul>
+    </nav>
+    <div id="Marcas">
+        <Section>
+            <article class="características">
+                <div class="lista-productos">
+                    <a href="part2.html">
+                        <img src="img.Desarrollo/Yezzy 350.png" alt="">
+
+                    </a>
+                </div>
+                <h1>Adidas Yezzy 350 V2 "MX Blue"</h1>
+                <h2>Calzado Adidas</2>
+                    <p>
+                        ₡ 115.000
+                    </p>
+            </article>
+            <article>
+                <div class="lista-productos">
+                    <a href="#">
+                        <img src="img.Desarrollo/Guarache5.png" alt="">
+                    </a>
+                </div>
+                <h1>Nike Huarache White | Mica Green</h1>
+                <h2>Calzado Nike</h2>
+                <p> 
+                    ₡ 54.995
+                </p>
+            </article>
+            <article>
+                <div class="lista-productos">
+
+                    <a href="yezzyBoost.html">
+                        <img src="img.Desarrollo/yezzy 350.03.png" alt="">
+                    </a>
+                </div>
+                <h1>Adidas Yezzy 700 Boost V2 "Static"</h1>
+                <h2>Calzado Adidas</h2>
+                <p>
+                    ₡ 149.995
+                </p>
+            </article>
+        </section>
+    </div>
+
+
+    <footer class="piepagina">
+        <div class="grupo1">
+            <div class="box">
+                <h1 class="importante">XFORCE
+                    <h2 class="sub">ESSENCIALS</h2>
+                </h1>
+            </div>
+            <div class="box">
+                <h1>SÍGUENOS</h1>
+                <div id="redessociales">
+                    <a href="https://www.facebook.com" class="fa fa-facebook" target="_blank">
+                        Facebook</a>
+                    <a href="https://www.instagram.com" class="fa fa-instagram" target="_blank">
+                        Instagram</a>
+                    <a href="https://www.whatsapp.com" class="fa fa-whatsapp" target="_blank">
+                        whatsapp</a>
+                </div>
+            </div>
+            <div class="box">
+                <h1>ACERCA DE</h1>
+                <div class="SobreDe">
+                    <a href="#">Acerca de nosotros</a>
+                    <a href="index5.html">Contacto</a>
+                    <a href="#"></a>
+                    <a href="#"></a>
+                </div>
+            </div>
+        </div>
+        <div class="grupo2">
+            <small>&copy; 2024 <b> XForce</b> - Todos los derechos reservados.</small>
+        </div>
+    </footer>
+
+    <!-- Importando bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <!-- Fin importe script bootstrap -->
+
+    <script src="Scripts/add to card.js"></script>
+
+</body>
+
+</html>
