@@ -244,7 +244,7 @@ nav .btn {
 
 
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 800px) {
 
     .grupo0 {
         grid-template-columns: repeat(1, 1fr);
@@ -254,8 +254,7 @@ nav .btn {
 
     .grupo0 .input-container input,
     .input-container textarea {
-        margin-left: 5px;
-        margin-right: 5px;
+        width: 90%;
     }
 
 }
