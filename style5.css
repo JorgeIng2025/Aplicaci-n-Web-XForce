@@ -263,6 +263,7 @@ nav .btn {
     .input-container input,
     .input-container textarea {
         max-width: 250px;
+        padding: 10px;
     }
 }
 
