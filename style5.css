@@ -107,25 +107,32 @@ nav .btn {
 }
 
 .piepagina .grupo0 .box .importante {
-
+    text-align: justify;
     font-family: serif;
     font-weight: bold;
     font-size: 35px;
     margin-bottom: 0px;
     color: #02031a;
-    margin-top: 20px;
     /* margin-left: 30px; */
 }
 
 
 .piepagina .grupo0 .box h2 {
-    font-size: 20px;
+    font-size: 18px;
     font-family: sans-serif;
     font-weight: lighter;
-    textaling: center;
+    margin-bottom: 15px;
     color: #021B2B;
 }
 
+@media screen and (max-width: 800px) {
+
+    .piepagina .grupo0 .box .importante,
+    h2 {
+        text-align: center;
+    }
+
+}
 /* .piepagina .grupo0 .box img {
     margin: 25px;
     border-radius: 20px;
@@ -253,6 +260,10 @@ nav .btn {
         max-width: 300px;
     }
 
+    .input-container input,
+    .input-container textarea {
+        max-width: 250px;
+    }
 }
 
 .piepagina .grupo2 {
