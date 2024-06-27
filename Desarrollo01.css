@@ -5,14 +5,12 @@
     font-family: sans-serif;
 }
 
-
 body {
     /* background-color: #ebdfcc; */
     width: 100%;
     height: auto;
 
 }
-
 
 .container h1 {
     Color: #02031a;
@@ -427,10 +425,11 @@ h2 {
 }
 
 .piepagina .grupo1 #redessociales a:hover {
-    color: #777b6e;
+    color: #C2C3C0;
 }
 
 .piepagina .grupo1 .SobreDe a {
+    text-align: center;
     list-style: none;
     text-decoration: none;
     display: block;
@@ -442,14 +441,14 @@ h2 {
 }
 
 .piepagina .grupo1 .SobreDe a:hover {
-    color: #777b6e;
+    color: #C2C3C0;
 }
 
 .piepagina .grupo2 {
     /* background-color: #0d2033; */
     padding: 15px 10px;
     text-align: center;
-    color: black;
+    color: #02031a;
 }
 
 .piepagina .grupo2 small {
@@ -466,8 +465,6 @@ h2 {
     }
 
 }
-
-
 @media screen and (max-width: 100px) {
     .slider {
         width: 100%;
