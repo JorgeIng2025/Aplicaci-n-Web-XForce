@@ -117,7 +117,7 @@ class CarritoDeCompras {
     /*Este boton sera ingresado pero en el card po rlo que este es un boton de finalización*/
     const finalizarBtn = document.createElement('button');
     finalizarBtn.id = 'finalizarCompraBtn';
-    finalizarBtn.textContent = 'Seguir Comprando';
+    finalizarBtn.textContent = 'Finalizar Compra';
     finalizarBtn.onclick = SeguirComprando;
     productosDiv.appendChild(finalizarBtn);
 
@@ -137,8 +137,7 @@ class CarritoDeCompras {
 /*Necesito esta función para cuando este desarrollado el index Card */
 function SeguirComprando() {
   // Lógica del index donde se encontrará el metodo de pago.
-  var url = 'index6.html'; // Reemplaza con la URL que desees abrir
-  window.open(url, '_blank');
+  alert("Gracias por su compra.!")
 }
 
 // Crea un nuevo carrito de compras
