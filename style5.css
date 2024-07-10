@@ -10,6 +10,8 @@ nav {
     font-weight: small;
     font-family: sans-serif;
     justify-content: center;
+    cursor: pointer;
+
     
 
 /*     position: fixed;
