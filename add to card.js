@@ -153,23 +153,21 @@ const carrito = new CarritoDeCompras();
 //   }
 // }
 
-document.getElementById("btn").addEventListener("click", function() {
-    this.classList.toggle("change");
-});
 
 function toggleCarrito() {
-    const carritoDiv = document.getElementById("carrito");
-    
-    // Comprueba el estado actual de visibilidad usando la propiedad computedStyle
-    const computedStyle = window.getComputedStyle(carritoDiv);
-    const displayStyle = computedStyle.getPropertyValue("display");
+  const carritoDiv = document.getElementById("carrito");
 
-    // Alterna la visibilidad basada en el estado actual
-    if (displayStyle === "none") {
-        menuDiv.style.display = "block"; // Muestra el menú si está oculto
-    } else {
-        menuDiv.style.display = "none"; // Oculta el menú si está visible
-    }
+  // Comprueba el estado actual de visibilidad usando la propiedad computedStyle
+  const computedStyle = window.getComputedStyle(carritoDiv);
+  const displayStyle = computedStyle.getPropertyValue("display");
+
+  // Alterna la visibilidad basada en el estado actual
+  // Alterna la visibilidad basada en el estado actual
+  if (displayStyle === "none") {
+    carritoDiv.style.display = "block"; // Muestra el menú si está oculto
+  } else {
+    carritoDiv.style.display = "none"; // Oculta el menú si está visible
+  }
 }
 
 
