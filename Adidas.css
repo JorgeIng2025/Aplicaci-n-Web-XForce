@@ -197,7 +197,8 @@ nav a:hover {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 80%;
+    width: 100%;
+    max-width: 80%;
     height: 80%;
     border-radius: 8px;
     background-color: #FFF;
@@ -215,7 +216,6 @@ nav a:hover {
 
     h2 {
         font-size: 30px;
-        margin-bottom: 50px;
     }
 }
 
@@ -259,8 +259,8 @@ nav a:hover {
     width: 50%;
     margin: 2, 5px;
     /* border: 1px solid #c2c3c0; */
-    /* background-color: #FDF8F0; */
-    /* box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    /* background-color: #FDF8F0;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
     border-radius: 8px; */
     padding: 10px;
     margin-bottom: 15px;
@@ -282,7 +282,6 @@ nav a:hover {
     background-color: transparent;
     margin-left: 90%;
     width: 18px;
-    font-weight: bold;
     cursor: pointer;
     margin-bottom: 0px;
 }
