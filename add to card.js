@@ -143,15 +143,35 @@ function SeguirComprando() {
 // Crea un nuevo carrito de compras
 const carrito = new CarritoDeCompras();
 
-// Función para mostrar u ocultar el carrito de compras
+// // Función para mostrar u ocultar el carrito de compras
+// function toggleCarrito() {
+//   const carritoDiv = document.getElementById("carrito");
+//   if (carritoDiv.style.display === "none") {
+//     carritoDiv.style.display = "block"; // Muestra el carrito si está oculto
+//   } else {
+//     carritoDiv.style.display = "none"; // Oculta el carrito si está visible
+//   }
+// }
+
+document.getElementById("btn").addEventListener("click", function() {
+    this.classList.toggle("change");
+});
+
 function toggleCarrito() {
-  const carritoDiv = document.getElementById("carrito");
-  if (carritoDiv.style.display === "none") {
-    carritoDiv.style.display = "block"; // Muestra el carrito si está oculto
-  } else {
-    carritoDiv.style.display = "none"; // Oculta el carrito si está visible
-  }
+    const carritoDiv = document.getElementById("carrito");
+    
+    // Comprueba el estado actual de visibilidad usando la propiedad computedStyle
+    const computedStyle = window.getComputedStyle(carritoDiv);
+    const displayStyle = computedStyle.getPropertyValue("display");
+
+    // Alterna la visibilidad basada en el estado actual
+    if (displayStyle === "none") {
+        menuDiv.style.display = "block"; // Muestra el menú si está oculto
+    } else {
+        menuDiv.style.display = "none"; // Oculta el menú si está visible
+    }
 }
+
 
 // Función para agregar un producto al carrito
 function agregarAlCarrito(nombre, precio, imgChange, talla) {
