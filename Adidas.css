@@ -21,6 +21,7 @@ nav {
     font-family: sans-serif;
     grid-template-columns: repeat(1, 1fr);
     justify-content: center;
+    cursor: pointer;
 }
 
 .Adidas {
